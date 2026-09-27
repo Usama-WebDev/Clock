@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="time"></p>
+    <script>
+        // let name = "usama";
+        // console.log(name.indexOf("u"))
+        // console.log(name.slice(0,3))
+        // console.log(name.substring(0,3))
+        // console.log(name.toUpperCase())
+        // console.log(name.toLowerCase())
+
+        // Math
+        // console.log(Math.ceil(2.1))
+        // console.log(Math.PI)
+        // console.log(Math.round(7.7))
+        // console.log(Math.random(111, 999))
+
+        // Date
+        // let date = new Date();
+        // console.log(date)
+        // console.log(date.getHours().toString())
+        // console.log(date.getMinutes().toString())
+        // console.log(date.getSeconds().toString())
+
+        let p = document.querySelector(".time");
+
+        function digitalClock() {
+            const date = new Date();
+
+            const hours = date.getHours().toString().padStart(2, "0")
+            const minutes = date.getMinutes().toString();
+            const seconds = date.getSeconds().toString().padStart(2, "0")
+
+            const timeString = hours + ":" + minutes + ":" + seconds;
+
+            p.textContent = timeString;
+        }
+
+        setInterval(digitalClock, 1000);
+    </script>
+</body>
+
+</html>
